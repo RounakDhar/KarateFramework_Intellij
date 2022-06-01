@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/demo[1:2]","start":1651646122594,"end":1651646125381,"title":"src\/test\/java\/demo[1:2] 12:05:22.594-12:05:25.381 User is able to Get the Response"},{"id":2,"group":1,"content":"src\/test\/java\/demo[2:8]","start":1651646125398,"end":1651646126153,"title":"src\/test\/java\/demo[2:8] 12:05:25.398-12:05:26.153 User is able to Post the Request and Get the Response"},{"id":3,"group":1,"content":"src\/test\/java\/demo[3:18]","start":1651646126166,"end":1651646126652,"title":"src\/test\/java\/demo[3:18] 12:05:26.166-12:05:26.652 User is able to Login sucessfully with valid credential"},{"id":4,"group":1,"content":"src\/test\/java\/demo[4:27]","start":1651646126666,"end":1651646127170,"title":"src\/test\/java\/demo[4:27] 12:05:26.666-12:05:27.170 User is able to Login sucessfully with Invalid credential"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
