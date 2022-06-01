@@ -1,4 +1,5 @@
-# KarateFramework_CTS
+# KarateFramework_Intellij
+
 Building Karate Framework ; which is a Combination of Cucumber , JavaScript . Used Scenario , Scenario Outline 
 
 Add Plugin in Intelij :
